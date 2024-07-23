@@ -1,10 +1,14 @@
 .homepage {
-  display: flex;
   width: 100%;
-  height: 100vh; /* Take up the full viewport height */
   font-family: 'Lato';
   margin: 0 auto;
-  align-items: stretch;
+}
+
+.section {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
 }
 
 .sidebar {
@@ -15,39 +19,8 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 20px;
-  position: relative;
-  height: 100%; /* Ensure the sidebar takes up the full height */
+  height: 100%;
   box-sizing: border-box;
-}
-
-.navigation ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.navigation li {
-  margin-bottom: 20px;
-}
-
-.navigation a {
-  color: #FFFFFF;
-  text-decoration: none;
-  font-size: 1.2rem;
-}
-
-.vertical-text {
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  transform: rotate(180deg);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 50%;
-}
-
-.vertical-text span {
-  margin-bottom: 20px;
 }
 
 .social-icons {
@@ -62,9 +35,10 @@
   margin-bottom: 10px;
 }
 
-h1 {
+.vertical-text {
   font-size: 3rem;
   margin: 0;
+  line-height: 1.2;
   position: absolute;
   bottom: 20px;
   left: 20px;
@@ -72,94 +46,51 @@ h1 {
 
 .main-content {
   width: 70%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
   height: 100%;
+  overflow: hidden;
   position: relative;
 }
 
 .main-content img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures the image covers the container without stretching */
+  object-fit: cover;
 }
 
-@media (max-width: 1024px) {
-  .homepage {
-    flex-direction: column;
-    height: auto;
+.section:nth-child(2) {
+  background-color: #f8f8f8;
+}
+
+.section:nth-child(3) {
+  background-color: #e8e8e8; 
+}
+
+.section h2 {
+  font-size: 2rem;
+}
+
+.section p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .section {
+    flex-direction: column; 
+    height: auto; 
   }
 
   .sidebar, .main-content {
     width: 100%;
-    height: 50vh; /* Ensure the content takes up half the height of the viewport */
-  }
-
-  .sidebar {
-    padding: 10px;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  .navigation a {
-    font-size: 1rem;
+    height: auto; 
   }
 
   .vertical-text {
-    font-size: 1rem;
-  }
-
-  .social-icons a {
-    font-size: 1.2rem;
+    position: static; 
+    margin: 20px 0; 
   }
 
   .main-content img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: relative;
-  }
-}
-
-@media (max-width: 480px) {
-  .homepage {
-    flex-direction: column;
     height: auto;
-  }
-
-  .sidebar, .main-content {
-    width: 100%;
-    height: 50vh; /* Ensure the content takes up half the height of the viewport */
-  }
-
-  .sidebar {
-    padding: 5px;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  .navigation a {
-    font-size: 0.9rem;
-  }
-
-  .vertical-text {
-    font-size: 0.9rem;
-  }
-
-  .social-icons a {
-    font-size: 1rem;
-  }
-
-  .main-content img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: relative;
   }
 }

@@ -5,28 +5,20 @@ import image from "./Megha Menon.jpeg"
 const HomePage = () => {
   return (
     <div className="homepage">
-      <div className="sidebar">
-        <nav className="navigation">
-          <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#work">Work</a></li>
-          </ul>
-        </nav>
-        <div className="vertical-text">
-          <span>Developer</span>
-          <span>Designer</span>
-          <span>Customer Experience</span>
-          <span>Chef</span>
+      <section className="section" id="section1">
+        <div className="sidebar">
+          <h1 className="vertical-text">Megha<br />Menon</h1>
         </div>
-        <div className="social-icons">
-          <a href="#linkedin"><i className="fab fa-linkedin"></i></a>
-          <a href="#github"><i className="fab fa-github"></i></a>
+        <div className="main-content">
+          <img src={image} alt="Megha Menon" />
         </div>
-        <h1>Megha Menon</h1>
-      </div>
-      <div className="main-content">
-        <img src={image} alt="Megha Menon" />
-      </div>
+      </section>
+      <section className="section" id="section2">
+        <h2>About</h2>
+      </section>
+      <section className="section" id="section3">
+        <h2>Work</h2>
+      </section>
     </div>
   );
 }
