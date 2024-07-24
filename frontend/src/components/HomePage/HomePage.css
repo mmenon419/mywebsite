@@ -59,6 +59,10 @@
 
 .section:nth-child(2) {
   background-color: #f8f8f8;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  padding: 40px 20px; 
 }
 
 .section:nth-child(3) {
@@ -72,6 +76,30 @@
 .section p {
   font-size: 1.2rem;
   line-height: 1.5;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+  max-width: 400px; 
+  width: 100%;
+  margin: 0 auto; 
+  text-align: center;
+}
+
+.about-content p {
+  margin: 0;
+  text-align: left;
+  text-align: justify;
+}
+
+.about-content p:first-of-type::first-letter {
+  font-size: 6rem; 
+  font-weight: bold;
+  float: left;
+  margin-right: 8px; 
+  line-height: 1; 
 }
 
 @media (max-width: 768px) {
